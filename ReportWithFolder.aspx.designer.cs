@@ -11,7 +11,7 @@ namespace ReportsRender
 {
 
 
-    public partial class ejemplo
+    public partial class ReportWithFolder
     {
 
         /// <summary>

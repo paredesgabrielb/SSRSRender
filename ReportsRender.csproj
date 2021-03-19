@@ -70,16 +70,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ejemplo.aspx" />
+    <Content Include="ReportWithFolder.aspx" />
+    <Content Include="ReporteSolo.aspx" />
     <Content Include="Web.config" />
+    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ejemplo.aspx.cs">
-      <DependentUpon>ejemplo.aspx</DependentUpon>
+    <Compile Include="ReportWithFolder.aspx.cs">
+      <DependentUpon>ReportWithFolder.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ejemplo.aspx.designer.cs">
-      <DependentUpon>ejemplo.aspx</DependentUpon>
+    <Compile Include="ReportWithFolder.aspx.designer.cs">
+      <DependentUpon>ReportWithFolder.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
@@ -87,10 +89,24 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="ReporteSolo.aspx.cs">
+      <DependentUpon>ReporteSolo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReporteSolo.aspx.designer.cs">
+      <DependentUpon>ReporteSolo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Web References\rs2005\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

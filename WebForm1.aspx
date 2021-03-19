@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ejemplo.aspx.cs" Inherits="ReportsRender.ejemplo" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ReportWithFolder.aspx.cs" Inherits="ReportsRender.ReportWithFolder" %>
 
 <%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
 
@@ -6,7 +6,7 @@
     protected override void OnInit(EventArgs e)
     {
         // TODO: PASAR AQUI EL REPORTFORLDER Y EL REPORT 
-        ReportName = "repo2";
+        ReportName = "noname";
         ReportFolder = "/Carpeta1";
         base.OnInit(e);
     }

@@ -8,12 +8,11 @@ using System.Web.UI.WebControls;
 
 namespace ReportsRender
 {
-    public partial class ejemplo : System.Web.UI.Page
+    public partial class ReportWithFolder : System.Web.UI.Page
     {
         // TODO: CREAR CLASE APARTE PARA QUE TODOS HEREDEN DE ELLA
 
         private string folder = "/";  // Ahora mismo ninguno
-
         private string report;
         private string reportName;   // Nombre
         private string reportFolder;   // Ruta
@@ -21,15 +20,13 @@ namespace ReportsRender
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            reportName = !string.IsNullOrEmpty(ReportName) ? ReportName : "";
+            reportFolder = !string.IsNullOrEmpty(ReportFolder) ? ReportFolder : "";
             if (!IsPostBack)   // Si carga por primera vez, si no se esta respondiendo a una solicitud hecha
             {
-                reportName = !string.IsNullOrEmpty(ReportName) ? ReportName : "";
-                reportFolder = !string.IsNullOrEmpty(ReportFolder) ? ReportFolder : "";
                 reportName = !string.IsNullOrEmpty(Request.QueryString["Nombre"]) ? Request.QueryString["Nombre"] : reportName;
                 reportFolder = !string.IsNullOrEmpty(Request.QueryString["Folder"]) ? Request.QueryString["Folder"] : reportFolder;
                 //reportParam = !string.IsNullOrEmpty(Request.QueryString["Param"]) ? Request.QueryString["Param"] : "";
-
-
 
                 if (!string.IsNullOrEmpty(reportName))
                 {
@@ -59,7 +56,6 @@ namespace ReportsRender
                         }
                         ReportViewer1.ServerReport.SetParameters(paramList);
                     }
-
 
                     ReportViewer1.ServerReport.Refresh();
                     LoadReports(reportFolder);
@@ -104,7 +100,7 @@ namespace ReportsRender
         ///
         /// Cargar la lista de reportes en el dropdown
         ///
-        protected void LoadReports(string folder)
+        protected void LoadReports(string _folder)
         {
             rs.Url = "http://datos/ReportServer/reportservice2005.asmx";
             rs.Credentials = System.Net.CredentialCache.DefaultCredentials;
@@ -114,18 +110,28 @@ namespace ReportsRender
             {
                 foreach (CatalogItem item in items.Where(x => x.Type == ItemTypeEnum.Folder).ToList())
                 {
-                    ddlFolders.Items.Add(new ListItem(item.Path));
+                    ddlFolders.Items.Add(new ListItem { 
+                        Text = item.Path,
+                        Selected = item.Path == _folder
+                    });;
                 }
 
+
                 // TODO: SI NO EXISTE EL ddlFolders.SelectedItem , entonces seleccionar uno
-                foreach (CatalogItem item in items.Where(x => x.Type == ItemTypeEnum.Report && x.Path == ddlFolders.SelectedItem.Text + "/" + x.Name).ToList())
+                if (ddlFolders.SelectedItem != null)
                 {
-                    ddlReports.Items.Add(new ListItem(item.Name, item.Path));
+                    foreach (CatalogItem item in items.Where(x => x.Type == ItemTypeEnum.Report && x.Path == ddlFolders.SelectedItem.Text + "/" + x.Name).ToList())
+                    {
+                        ddlReports.Items.Add(new ListItem(item.Name, item.Path));
+                    }
                 }
+                ddlFolders.Visible = true;
+                ddlReports.Visible = true;
+                ParamTable.Visible = true;
             }
             else
             {
-                if (ddlReports.SelectedItem.Value.Replace(folder + "/", "") != ddlReports.SelectedItem.Text)
+                if (ddlReports.SelectedItem.Value.Replace(_folder + "/", "") != ddlReports.SelectedItem.Text)
                 {
                     ddlReports.Items.Clear();
                     foreach (CatalogItem item in items.Where(x => x.Type == ItemTypeEnum.Report && x.Path == ddlFolders.SelectedItem.Text + "/" + x.Name).ToList())
