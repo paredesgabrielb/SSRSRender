@@ -20,8 +20,8 @@ namespace ReportsRender
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            reportName = !string.IsNullOrEmpty(ReportName) ? ReportName : "";
-            reportFolder = !string.IsNullOrEmpty(ReportFolder) ? ReportFolder : "";
+            reportName = !string.IsNullOrEmpty(ReportName) ? ReportName : reportName;
+            reportFolder = !string.IsNullOrEmpty(ReportFolder) ? ReportFolder : reportFolder;
             if (!IsPostBack)   // Si carga por primera vez, si no se esta respondiendo a una solicitud hecha
             {
                 reportName = !string.IsNullOrEmpty(Request.QueryString["Nombre"]) ? Request.QueryString["Nombre"] : reportName;
@@ -65,13 +65,12 @@ namespace ReportsRender
                     if (!string.IsNullOrEmpty(reportFolder))
                     {
                         LoadReports(reportFolder);
-                        ShowReport();
                     }
                     else
                     {
                         LoadReports(folder);
-                        ShowReport();
                     }
+                    ShowReport();
                 }
             }
             else // 2 o mas veces que ya entrado
@@ -81,14 +80,18 @@ namespace ReportsRender
                     if (ddlFolders.SelectedItem != null)
                     {
                         LoadReports(ddlFolders.SelectedItem.Text);
+                        
+                        if (ReportViewer1.ServerReport.ReportPath != ddlReports.SelectedItem.Value)
+                        {
+                            ShowReport();
+                        }
                     }
                     else
                     {
                         LoadReports(folder);
                     }
-                    
-                    ShowReport();
-                }   
+                }
+               
             } 
 
 
@@ -198,10 +201,10 @@ namespace ReportsRender
             );
         }
 
-        public override void Dispose()
-        {
-            base.Dispose();
-        }
+        //public override void Dispose()
+        //{
+        //    base.Dispose();
+        //}
 
     }
 }
