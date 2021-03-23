@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ReportWithFolder.aspx.cs" Inherits="ReportsRender.ReportWithFolder" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="~/ReportWithFolder.aspx.cs" Inherits="ReportsRender.ReportWithFolder" %>
 
 <%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
 
@@ -6,8 +6,8 @@
     protected override void OnInit(EventArgs e)
     {
         // TODO: PASAR AQUI EL REPORTFORLDER Y EL REPORT 
-        ReportName = "repo2";
-        ReportFolder = "/Carpeta1";
+        ReportName = "";
+        ReportFolder = "/eManagement/Administrativo y Financiero/Sección Almacén";
         base.OnInit(e);
     }
 </script>
@@ -26,7 +26,7 @@
         <div>
 
             <table id="ParamTable" style="padding: 0px; margin: 0px; width: 100%; background-color: #ddd" runat="server">
-                <tr>
+                <tr style="display:none">
                     <td style="padding: 5px; width: 150px; text-align: right; font-weight: bold">Seleccione la Carpeta:</td>
                     <td style="padding: 5px;">
                         <asp:DropDownList ID="ddlFolders" runat="server"  AutoPostBack="True"></asp:DropDownList>
@@ -35,7 +35,7 @@
                 <tr>
                     <td style="padding: 5px; width: 150px; text-align: right; font-weight: bold">Seleccione el reporte:</td>
                     <td style="padding: 5px;">
-                        <asp:DropDownList ID="ddlReports" runat="server" AutoPostBack="True"></asp:DropDownList>
+                        <asp:DropDownList ID="ddlReports" runat="server"  AutoPostBack="True"></asp:DropDownList>
                     </td>
                 </tr>
             </table>
@@ -49,8 +49,8 @@
 </body>
 <script type="text/JavaScript">
     //window.onload =
-        function resize() {
-        var viewer = document.getElementById("<%=ReportViewer1.ClientID %>");
+    function resize() {
+        var viewer = document.getElementById("<%= ReportViewer1.ClientID %>");
 		var viewer_ct = document.getElementById("<%=ReportViewer1.ClientID %>" + "_ctl09");
 
         var htmlheight = document.documentElement.clientHeight;

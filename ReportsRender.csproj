@@ -70,12 +70,148 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Administrativo\Activo_Fijos.aspx" />
+    <Content Include="Almacen\Almacen.aspx" />
+    <Content Include="Almacen\Historicos.aspx" />
+    <Content Include="GestionHumana\Acciones-de-Personal.aspx" />
+    <Content Include="GestionHumana\Asistencias.aspx" />
+    <Content Include="GestionHumana\Capacitaciones.aspx" />
+    <Content Include="GestionHumana\Evaluaciones\acuerdos_desempenos_2020.aspx" />
+    <Content Include="GestionHumana\Evaluaciones\acuerdos_desempenos_v2.aspx" />
+    <Content Include="GestionHumana\Evaluaciones\pendientes_acuerdos_desempenos.aspx" />
+    <Content Include="GestionHumana\Evaluaciones\pendientes_evaluaciones_competencias.aspx" />
+    <Content Include="GestionHumana\Evaluaciones\resultados_evaluaciones_desempenos.aspx" />
+    <Content Include="GestionHumana\Maestro-de-Empleados.aspx" />
+    <Content Include="GestionHumana\Permisos-y-Licencias.aspx" />
+    <Content Include="GestionHumana\Vacaciones.aspx" />
+    <Content Include="IGP\Informe_Anual_Fisico_Financiero.aspx" />
+    <Content Include="IGP\Reporte_Trimestral_Del_Indicador_Gestion_Presupuestaria.aspx" />
+    <Content Include="IGP\Reporte_Trimestral_Del_Indice_de_Gestion_Presupuestaria.aspx" />
     <Content Include="ReportWithFolder.aspx" />
     <Content Include="ReporteSolo.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administrativo\Activo_Fijos.aspx.cs">
+      <DependentUpon>Activo_Fijos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrativo\Activo_Fijos.aspx.designer.cs">
+      <DependentUpon>Activo_Fijos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Almacen\Almacen.aspx.cs">
+      <DependentUpon>Almacen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Almacen\Almacen.aspx.designer.cs">
+      <DependentUpon>Almacen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Almacen\Historicos.aspx.cs">
+      <DependentUpon>Historicos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Almacen\Historicos.aspx.designer.cs">
+      <DependentUpon>Historicos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GestionHumana\Acciones-de-Personal.aspx.cs">
+      <DependentUpon>Acciones-de-Personal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionHumana\Acciones-de-Personal.aspx.designer.cs">
+      <DependentUpon>Acciones-de-Personal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GestionHumana\Asistencias.aspx.cs">
+      <DependentUpon>Asistencias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionHumana\Asistencias.aspx.designer.cs">
+      <DependentUpon>Asistencias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GestionHumana\Capacitaciones.aspx.cs">
+      <DependentUpon>Capacitaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionHumana\Capacitaciones.aspx.designer.cs">
+      <DependentUpon>Capacitaciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GestionHumana\Evaluaciones\acuerdos_desempenos_2020.aspx.cs">
+      <DependentUpon>acuerdos_desempenos_2020.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionHumana\Evaluaciones\acuerdos_desempenos_2020.aspx.designer.cs">
+      <DependentUpon>acuerdos_desempenos_2020.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GestionHumana\Evaluaciones\acuerdos_desempenos_v2.aspx.cs">
+      <DependentUpon>acuerdos_desempenos_v2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionHumana\Evaluaciones\acuerdos_desempenos_v2.aspx.designer.cs">
+      <DependentUpon>acuerdos_desempenos_v2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GestionHumana\Evaluaciones\pendientes_acuerdos_desempenos.aspx.cs">
+      <DependentUpon>pendientes_acuerdos_desempenos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionHumana\Evaluaciones\pendientes_acuerdos_desempenos.aspx.designer.cs">
+      <DependentUpon>pendientes_acuerdos_desempenos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GestionHumana\Evaluaciones\pendientes_evaluaciones_competencias.aspx.cs">
+      <DependentUpon>pendientes_evaluaciones_competencias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionHumana\Evaluaciones\pendientes_evaluaciones_competencias.aspx.designer.cs">
+      <DependentUpon>pendientes_evaluaciones_competencias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GestionHumana\Evaluaciones\resultados_evaluaciones_desempenos.aspx.cs">
+      <DependentUpon>resultados_evaluaciones_desempenos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionHumana\Evaluaciones\resultados_evaluaciones_desempenos.aspx.designer.cs">
+      <DependentUpon>resultados_evaluaciones_desempenos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GestionHumana\Maestro-de-Empleados.aspx.cs">
+      <DependentUpon>Maestro-de-Empleados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionHumana\Maestro-de-Empleados.aspx.designer.cs">
+      <DependentUpon>Maestro-de-Empleados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GestionHumana\Permisos-y-Licencias.aspx.cs">
+      <DependentUpon>Permisos-y-Licencias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionHumana\Permisos-y-Licencias.aspx.designer.cs">
+      <DependentUpon>Permisos-y-Licencias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GestionHumana\Vacaciones.aspx.cs">
+      <DependentUpon>Vacaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionHumana\Vacaciones.aspx.designer.cs">
+      <DependentUpon>Vacaciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IGP\Informe_Anual_Fisico_Financiero.aspx.cs">
+      <DependentUpon>Informe_Anual_Fisico_Financiero.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IGP\Informe_Anual_Fisico_Financiero.aspx.designer.cs">
+      <DependentUpon>Informe_Anual_Fisico_Financiero.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IGP\Reporte_Trimestral_Del_Indicador_Gestion_Presupuestaria.aspx.cs">
+      <DependentUpon>Reporte_Trimestral_Del_Indicador_Gestion_Presupuestaria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IGP\Reporte_Trimestral_Del_Indicador_Gestion_Presupuestaria.aspx.designer.cs">
+      <DependentUpon>Reporte_Trimestral_Del_Indicador_Gestion_Presupuestaria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IGP\Reporte_Trimestral_Del_Indice_de_Gestion_Presupuestaria.aspx.cs">
+      <DependentUpon>Reporte_Trimestral_Del_Indice_de_Gestion_Presupuestaria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IGP\Reporte_Trimestral_Del_Indice_de_Gestion_Presupuestaria.aspx.designer.cs">
+      <DependentUpon>Reporte_Trimestral_Del_Indice_de_Gestion_Presupuestaria.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ReportWithFolder.aspx.cs">
       <DependentUpon>ReportWithFolder.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

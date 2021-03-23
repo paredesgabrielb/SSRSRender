@@ -119,7 +119,6 @@ C:\Users\gparedes\OneDrive - Direccion General de Presupuesto\Escritorio\Reports
 C:\Users\gparedes\OneDrive - Direccion General de Presupuesto\Escritorio\ReportsRender\bin\Microsoft.ReportViewer.ProcessingObjectModel.dll
 C:\Users\gparedes\OneDrive - Direccion General de Presupuesto\Escritorio\ReportsRender\bin\Microsoft.SqlServer.Types.dll
 C:\Users\gparedes\OneDrive - Direccion General de Presupuesto\Escritorio\ReportsRender\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\gparedes\OneDrive - Direccion General de Presupuesto\Escritorio\ReportsRender\obj\Debug\ReportsRender.csprojAssemblyReference.cache
 C:\Users\gparedes\OneDrive - Direccion General de Presupuesto\Escritorio\ReportsRender\obj\Debug\ReportsRender.csproj.CoreCompileInputs.cache
 C:\Users\gparedes\OneDrive - Direccion General de Presupuesto\Escritorio\ReportsRender\obj\Debug\ReportsRender.csproj.CopyComplete
 C:\Users\gparedes\OneDrive - Direccion General de Presupuesto\Escritorio\ReportsRender\obj\Debug\ReportsRender.dll

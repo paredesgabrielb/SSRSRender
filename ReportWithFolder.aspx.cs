@@ -125,7 +125,16 @@ namespace ReportsRender
                 {
                     foreach (CatalogItem item in items.Where(x => x.Type == ItemTypeEnum.Report && x.Path == ddlFolders.SelectedItem.Text + "/" + x.Name).ToList())
                     {
-                        ddlReports.Items.Add(new ListItem(item.Name, item.Path));
+                        ddlReports.Items.Add(
+                            new ListItem
+                            {
+                                Text = item.Name,
+                                Value = item.Path,
+                                Selected = item.Name == reportName
+                            }
+
+                            );
+
                     }
                 }
                 ddlFolders.Visible = true;
