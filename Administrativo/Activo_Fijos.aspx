@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ReportWithFolder.aspx.cs" Inherits="ReportsRender.ReportWithFolder" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="~/ReportWithFolder.aspx.cs" Inherits="ReportsRender.ReportWithFolder" %>
 
 <%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
 
@@ -26,7 +26,7 @@
         <div>
 
             <table id="ParamTable" style="padding: 0px; margin: 0px; width: 100%; background-color: #ddd" runat="server">
-                <tr>
+                <tr style="display:none">
                     <td style="padding: 5px; width: 150px; text-align: right; font-weight: bold">Seleccione la Carpeta:</td>
                     <td style="padding: 5px;">
                         <asp:DropDownList ID="ddlFolders" runat="server"  AutoPostBack="True"></asp:DropDownList>
